@@ -1,9 +1,9 @@
 {
   "shifts": {
     "EARLY": {
-      "hours": 8,
-      "start_time": "06:00",
-      "end_time": "14:00"
+      "hours": 12,
+      "start_time": "07:30",
+      "end_time": "19:30"
     },
     "DAY": {
       "hours": 8,
@@ -11,41 +11,41 @@
       "end_time": "16:00"
     },
     "NIGHT": {
-      "hours": 8,
-      "start_time": "22:00",
-      "end_time": "06:00"
+      "hours": 12,
+      "start_time": "19:30",
+      "end_time": "07:30"
     }
   },
   "relief_staff": [
     {
       "id": "STAFF_001",
-      "name": "John Smith",
+      "name": "Alex",
       "role": "PARAMEDIC",
-      "target_hours_per_week": 40
+      "target_hours_per_week": 24
     },
     {
       "id": "STAFF_002",
-      "name": "Jane Doe",
+      "name": "Erin",
       "role": "TECHNICIAN",
-      "target_hours_per_week": 40
+      "target_hours_per_week": 36
     },
     {
       "id": "STAFF_003",
-      "name": "Bob Johnson",
-      "role": "PARAMEDIC",
-      "target_hours_per_week": 40
+      "name": "Nicky",
+      "role": "TECHNICIAN",
+      "target_hours_per_week": 36
     },
     {
       "id": "STAFF_004",
-      "name": "Alice Williams",
+      "name": "Viv",
       "role": "TECHNICIAN",
-      "target_hours_per_week": 40
+      "target_hours_per_week": 24
     },
     {
       "id": "STAFF_005",
-      "name": "Charlie Brown",
-      "role": "PARAMEDIC",
-      "target_hours_per_week": 40
+      "name": "Cheryl",
+      "role": "TECHNICIAN",
+      "target_hours_per_week": 36
     }
   ],
   "constraints": {
