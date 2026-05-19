@@ -1,0 +1,63 @@
+{
+  "shifts": {
+    "EARLY": {
+      "hours": 8,
+      "start_time": "06:00",
+      "end_time": "14:00"
+    },
+    "DAY": {
+      "hours": 8,
+      "start_time": "08:00",
+      "end_time": "16:00"
+    },
+    "NIGHT": {
+      "hours": 8,
+      "start_time": "22:00",
+      "end_time": "06:00"
+    }
+  },
+  "relief_staff": [
+    {
+      "id": "STAFF_001",
+      "name": "John Smith",
+      "role": "PARAMEDIC",
+      "target_hours_per_week": 40
+    },
+    {
+      "id": "STAFF_002",
+      "name": "Jane Doe",
+      "role": "TECHNICIAN",
+      "target_hours_per_week": 40
+    },
+    {
+      "id": "STAFF_003",
+      "name": "Bob Johnson",
+      "role": "PARAMEDIC",
+      "target_hours_per_week": 40
+    },
+    {
+      "id": "STAFF_004",
+      "name": "Alice Williams",
+      "role": "TECHNICIAN",
+      "target_hours_per_week": 40
+    },
+    {
+      "id": "STAFF_005",
+      "name": "Charlie Brown",
+      "role": "PARAMEDIC",
+      "target_hours_per_week": 40
+    }
+  ],
+  "constraints": {
+    "max_consecutive_shifts": 5,
+    "min_hours_between_shifts": 11,
+    "min_rest_days_after_nights": 2,
+    "enforce_night_to_day_rest": true,
+    "night_to_day_min_rest_hours": 36
+  },
+  "optimization": {
+    "fairness_weight": 0.4,
+    "rest_compliance_weight": 0.35,
+    "workload_balance_weight": 0.25
+  }
+}
