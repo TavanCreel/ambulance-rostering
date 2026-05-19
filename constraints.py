@@ -65,10 +65,11 @@ class ConstraintValidator:
             if not valid:
                 return False, reason
 
-        # Check rest days after nights
-        valid, reason = self._check_rest_days_after_nights(staff_schedule, shift_date, shift_type)
-        if not valid:
-            return False, reason
+        # Check rest days after nights (only if not assigning another night shift)
+        if shift_type != 'NIGHT':
+            valid, reason = self._check_rest_days_after_nights(staff_schedule, shift_date, shift_type)
+            if not valid:
+                return False, reason
 
         return True, "OK"
 
@@ -127,7 +128,9 @@ class ConstraintValidator:
 
     def _check_rest_days_after_nights(self, schedule: List[Tuple], shift_date: datetime,
                                       shift_type: str) -> Tuple[bool, str]:
-        """Check that staff have at least min_rest_days_after_nights rest days after night shifts.
+        """Check that staff have at least min_rest_days_after_nights rest days after their last night shift.
+        
+        Only enforces rest when assigning non-night shifts (allows consecutive nights).
         
         Returns:
             Tuple of (is_valid, reason_if_invalid)
